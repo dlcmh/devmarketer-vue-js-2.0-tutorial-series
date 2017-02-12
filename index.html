@@ -15,7 +15,7 @@
         <div class="col-md-12 text-center">
           <h1>You are a <strong></strong></h1>
           <hr>
-          <h3>Current XP: </h3>
+          <h3>Current XP: {{ xp }}</h3>
         </div>
       </div>
       <div class="row">
@@ -41,6 +41,9 @@
   <script>
     var app = new Vue({
       el: '#app',
+      data: {
+        xp: 10,
+      }
     })
   </script>
 </html>
