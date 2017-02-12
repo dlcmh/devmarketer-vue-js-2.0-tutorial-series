@@ -13,7 +13,7 @@
     <div id="app">
       <h1>{{ message }}</h1>
       <ul>
-        <li v-for='todo in todos'>{{ todo.text }}</li>
+        <li style='list-style-type:none' v-for='todo in todos'>{{ todo.id }}) {{ todo.text }}</li>
       </ul>
     </div>
   </body>
@@ -25,9 +25,9 @@
       data: {
         message: 'Hello Vue World',
         todos: [
-          { text: 'Learn Vue' },
-          { text: 'Like the video' },
-          { text: 'Subscribe to DevMarketer' },
+          { id: 1, text: 'Learn Vue' },
+          { id: 2, text: 'Like the video' },
+          { id: 3, text: 'Subscribe to DevMarketer' },
         ]
       }
     })
