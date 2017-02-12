@@ -15,6 +15,9 @@
       <ul>
         <li style='list-style-type:none' v-for='todo in todos'>{{ todo.id }}) {{ todo.text }}</li>
       </ul>
+      <p>
+        <span v-for='count in repeat_count'>Repeating myself {{ count }} times...</span>
+      </p>
     </div>
   </body>
 
@@ -28,7 +31,8 @@
           { id: 1, text: 'Learn Vue' },
           { id: 2, text: 'Like the video' },
           { id: 3, text: 'Subscribe to DevMarketer' },
-        ]
+        ],
+        repeat_count: 100
       }
     })
   </script>
