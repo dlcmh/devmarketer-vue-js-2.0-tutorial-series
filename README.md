@@ -41,3 +41,17 @@ See also [List Rendering — Vue.js](https://vuejs.org/v2/guide/list.html) for g
 See [Event Handling — Vue.js](https://vuejs.org/v2/guide/events.html).
 
 `@` can be used as a shorthand for `v-on:`, eg `@click` instead of `v-on:click`.
+
+### 08 - Computed Properties
+
+[Computed Properties — Vue.js](https://vuejs.org/v2/guide/computed.html)
+
+In-template expressions are very convenient, but they are really only meant for simple operations. Putting too much logic into your templates can make them bloated and hard to maintain. For example:
+
+    <div id="example">
+      {{ message.split('').reverse().join('') }}
+    </div>
+
+At this point, the template is no longer simple and declarative. You have to look at it for a second before realizing that it displays `message` in reverse. The problem is made worse when you want to include the reversed message in your template more than once.
+
+That’s why for any complex logic, you should use a __computed property__.
