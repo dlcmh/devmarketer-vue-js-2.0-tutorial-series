@@ -11,7 +11,8 @@
   </head>
   <body>
     <div id="app">
-      <h1 v-html='intro'></h1>
+      <h1 v-show='viewed'>You have viewed this page</h1>
+      <p v-show='visited'>This won't show</p>
     </div>
   </body>
 
@@ -21,7 +22,9 @@
       el: '#app',
       data: {
         message: 'Hello Vue World',
-        intro: 'Welcome to the tutorial <small>It is all about Vue.js</small>'
+        intro: 'Welcome to the tutorial <small>It is all about Vue.js</small>',
+        viewed: true,
+        visited: false,
       }
     })
   </script>
