@@ -13,6 +13,7 @@
     <div id="app">
       <p v-bind:title='title'>v-bind method 1 - {{ message }}</p>
       <p :title='title'>v-bind method 2 (shorthand) - {{ message }}</p>
+      <img :src='imgUrl' alt='imgAlt'>
     </div>
   </body>
 
@@ -23,6 +24,8 @@
       data: {
         message: 'Hello World',
         title: `Yo! You loaded this page on ${new Date()}`,
+        imgUrl: 'https://vuejs.org/images/logo.png',
+        imgAlt: 'VueJS logo',
       }
     })
   </script>
