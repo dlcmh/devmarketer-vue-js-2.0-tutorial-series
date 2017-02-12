@@ -25,3 +25,7 @@ Directive begin with 'v-'.
 [`v-once`](https://vuejs.org/v2/api/#v-once) -> Render the element and component __once__ only. On subsequent re-renders, the element/component and all its children will be treated as static content and skipped. This can be used to optimize update performance. Also, see [Cheap Static Components with v-once](https://vuejs.org/v2/guide/components.html#Cheap-Static-Components-with-v-once) -> Rendering plain HTML elements is very fast in Vue, but sometimes you might have a component that contains __a lot__ of static content. In these cases, you can ensure that it’s only evaluated once and then cached by adding the `v-once` directive to the root element.
 
 [`v-cloak`](https://vuejs.org/v2/api/#v-cloak) -> This directive will remain on the element until the associated Vue instance finishes compilation. Combined with CSS rules such as `[v-cloak] { display: none }`, this directive can be used to hide un-compiled mustache bindings until the Vue instance is ready.
+
+### 04 - [`v-bind` directive](https://vuejs.org/v2/api/#v-bind)
+
+Shorthand: `:`

@@ -8,39 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <style>
-      [v-cloak] {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <div id="app">
-      <p v-cloak>{{ cloaked }}</p>
-      <h1 v-show='viewed'>You have viewed this page</h1>
-      <p v-show='visited'>This won't show</p>
-      <p v-if='render1'>This gets inserted into the DOM</p>
-      <p v-if='render2'>This won't get inserted into the DOM</p>
-      <p v-if='render1 || render2'>This gets inserted into the DOM</p>
-
-      <p style='color: crimson' v-if='random_number > 0.5'>
-        Now you see me (because {{ random_number }} is > 0.5)
-      </p>
-      <p style='color: teal' v-else>
-        Now you don't (because {{ random_number }} is <= 0.5)
-      </p>
-
-      <p>Guess what ... <span v-pre>{{ this will not be compiled }}</span></p>
-
-      <div v-once>
-        <p>{{ rendered_once }}</p>
-        <ol>
-          <li>... a lot ...</li>
-          <li>... of static ...</li>
-          <li>... content ...</li>
-        </ol>
-      </div>
+      <h1>{{ message }}</h1>
     </div>
   </body>
 
@@ -49,17 +20,7 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue World',
-        intro: 'Welcome to the tutorial <small>It is all about Vue.js</small>',
-        viewed: true,
-        visited: false,
-        render1: true,
-        render2: false,
-        random_number: Math.random(),
-        rendered_once: 'Terms of Service', // changing value via
-                                           // app.rendered_once in the console
-                                           // will not cause a re-render
-        cloaked: 'Cloaked with v-cloak!'
+        message: 'Hello World'
       }
     })
   </script>
