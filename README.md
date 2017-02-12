@@ -5,3 +5,5 @@ Based on [Vue.js Fundamentals - YouTube](https://www.youtube.com/playlist?list=P
 ### 02 - Setup
 
 Starter `index.html` template.
+
+Minimal Vue app.
