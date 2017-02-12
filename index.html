@@ -13,8 +13,8 @@
     <div id="app">
       <h1>Counter: {{ count }}</h1>
         <!-- <input type='text' v-model='message' class='form-inline'> -->
-        <button v-on:click='countUp' class='btn btn-success'>Count up!</button>
-        <button v-on:click='countDown' class='btn btn-warning'>Count down!</button>
+        <button @click='countUp' class='btn btn-success'>Count up!</button>
+        <button @click='countDown' class='btn btn-warning'>Count down!</button>
     </div>
   </body>
 
