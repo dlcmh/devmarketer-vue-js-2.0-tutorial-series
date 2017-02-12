@@ -13,7 +13,7 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1>Hello</h1>
+          <h1>Hello {{ fullName }}</h1>
           <ul class="text-left">
             <li>First name: {{ firstName }}</li>
             <li>Last name: {{ lastName }}</li>
@@ -45,6 +45,11 @@
       data: {
         firstName: '',
         lastName: '',
+      },
+      computed: {
+        fullName: function() {
+          return this.firstName + ' ' + this.lastName
+        }
       },
     })
   </script>
