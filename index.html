@@ -13,7 +13,7 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1>You are a <strong></strong></h1>
+          <h1>Your level is: <strong>{{ level }}</strong></h1>
           <hr>
           <h3>Current XP: {{ xp }}</h3>
         </div>
@@ -51,6 +51,19 @@
         decreaseXp: function() {
           return this.xp -= 10
         },
+      },
+      computed: {
+        level: function() {
+          if (this.xp >= 200) {
+            return 'Pro'
+          } else if (this.xp >= 100) {
+            return 'Intermediate'
+          } else if (this.xp >= 0) {
+            return 'Beginner'
+          } else {
+            return 'Banned'
+          }
+        }
       },
     })
   </script>
