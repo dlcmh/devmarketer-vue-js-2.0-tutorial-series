@@ -18,12 +18,12 @@
             <hr>
             <div class="row">
               <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Starting Zip">
-                <span class="city-span"></span>
+                <input type="text" class="form-control" placeholder="Starting Zip" v-model='startingZip'>
+                <span class="city-span">{{ startingCity }}</span>
               </div>
               <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Ending Zip">
-                <span class="city-span"></span>
+                <input type="text" class="form-control" placeholder="Ending Zip" v-model='endingZip'>
+                <span class="city-span">{{ endingCity }}</span>
               </div>
             </div>
             <div class="row">
@@ -43,7 +43,13 @@
 
   <script>
     var app = new Vue({
-      el: '#app'
+      el: '#app',
+      data: {
+        startingZip: '',
+        startingCity: '',
+        endingZip: '',
+        endingCity: '',
+      }
     })
   </script>
 </html>
