@@ -12,6 +12,9 @@
   <body>
     <div id="app">
       <h1>{{ message }}</h1>
+      <ul>
+
+      </ul>
     </div>
   </body>
 
@@ -20,7 +23,12 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue World'
+        message: 'Hello Vue World',
+        todos: [
+          { text: 'Learn Vue' },
+          { text: 'Like the video' },
+          { text: 'Subscribe to DevMarketer' },
+        ]
       }
     })
   </script>
