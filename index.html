@@ -25,6 +25,15 @@
       </p>
 
       <p>Guess what ... <span v-pre>{{ this will not be compiled }}</span></p>
+
+      <div v-once>
+        <p>{{ rendered_once }}</p>
+        <ol>
+          <li>... a lot ...</li>
+          <li>... of static ...</li>
+          <li>... content ...</li>
+        </ol>
+      </div>
     </div>
   </body>
 
@@ -40,6 +49,9 @@
         render1: true,
         render2: false,
         random_number: Math.random(),
+        rendered_once: 'Terms of Service' // changing value via
+                                          // app.rendered_once in the console
+                                          // will not cause a re-render
       }
     })
   </script>
