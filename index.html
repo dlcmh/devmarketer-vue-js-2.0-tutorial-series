@@ -13,7 +13,7 @@
     <div id="app">
       <h1>Clicked: {{ count }} times</h1>
         <input type='text' v-model='message' class='form-inline'>
-        <button class='btn btn-primary'>Press me!</button>
+        <button v-on:click='countUp' class='btn btn-primary'>Press me!</button>
     </div>
   </body>
 
@@ -24,6 +24,11 @@
       data: {
         message: 'Hello Vue World',
         count: 0
+      },
+      methods: {
+        countUp: function() {
+          this.count += 1
+        }
       }
     })
   </script>
