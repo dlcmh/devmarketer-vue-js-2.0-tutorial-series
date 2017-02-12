@@ -35,7 +35,7 @@
       },
       methods: {
         humanizeUrl: function() {
-          null
+          this.cleanedUrl = this.enteredUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')
         }
       }
     })
