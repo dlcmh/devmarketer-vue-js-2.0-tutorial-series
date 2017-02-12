@@ -11,9 +11,7 @@
   </head>
   <body>
     <div id="app">
-      <p v-bind:title='title'>v-bind method 1 - {{ message }}</p>
-      <p :title='title'>v-bind method 2 (shorthand) - {{ message }}</p>
-      <img :src='imgUrl' alt='imgAlt'>
+      <h1>{{ message }}</h1>
     </div>
   </body>
 
@@ -22,10 +20,7 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello World',
-        title: `Yo! You loaded this page on ${new Date()}`,
-        imgUrl: 'https://vuejs.org/images/logo.png',
-        imgAlt: 'VueJS logo',
+        message: 'Hello Vue World'
       }
     })
   </script>
