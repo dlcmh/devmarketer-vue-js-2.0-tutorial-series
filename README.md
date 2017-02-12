@@ -33,3 +33,5 @@ Shorthand: `:`
 ### 05 - [`v-for` directive](https://vuejs.org/v2/api/#v-for)
 
 See also [List Rendering — Vue.js](https://vuejs.org/v2/guide/list.html) for guidance on using `v-for` & `v-if`.
+
+### 06 - Two-way binding with the [`v-model` directive](https://vuejs.org/v2/guide/forms.html)
