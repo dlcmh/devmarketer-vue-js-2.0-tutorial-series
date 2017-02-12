@@ -35,3 +35,9 @@ Shorthand: `:`
 See also [List Rendering — Vue.js](https://vuejs.org/v2/guide/list.html) for guidance on using `v-for` & `v-if`.
 
 ### 06 - Two-way binding with the [`v-model` directive](https://vuejs.org/v2/guide/forms.html)
+
+### 07 - Handling events with `v-on` directive
+
+See [Event Handling — Vue.js](https://vuejs.org/v2/guide/events.html).
+
+`@` can be used as a shorthand for `v-on:`, eg `@click` instead of `v-on:click`.
