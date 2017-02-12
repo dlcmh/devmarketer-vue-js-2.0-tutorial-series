@@ -13,6 +13,9 @@
     <div id="app">
       <h1 v-show='viewed'>You have viewed this page</h1>
       <p v-show='visited'>This won't show</p>
+      <p v-if='render1'>This gets inserted into the DOM</p>
+      <p v-if='render2'>This won't get inserted into the DOM</p>
+      <p v-if='render1 || render2'>This gets inserted into the DOM</p>
     </div>
   </body>
 
@@ -25,6 +28,8 @@
         intro: 'Welcome to the tutorial <small>It is all about Vue.js</small>',
         viewed: true,
         visited: false,
+        render1: true,
+        render2: false,
       }
     })
   </script>
