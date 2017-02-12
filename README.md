@@ -11,3 +11,5 @@ Minimal Vue app.
 ### 03 - Directives
 
 Directive begin with 'v-'.
+
+[`v-text`](https://vuejs.org/v2/api/#v-text) -> Updates the element’s `textContent`. If you need to update the part of `textContent`, you should use `{{ Mustache }}` interpolations.
