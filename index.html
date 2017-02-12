@@ -57,8 +57,12 @@
 
           if (this.startingZip.length == 5) {
             // call API method to populate startingCity
+            this.lookupStartingZip()
           }
         }
+      },
+      methods: {
+        lookupStartingZip: _.debounce(function() {}, 500)
       }
     })
   </script>
