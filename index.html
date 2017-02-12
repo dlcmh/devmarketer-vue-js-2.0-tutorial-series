@@ -13,24 +13,33 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1>Your level is: <strong>{{ level }}</strong></h1>
+          <h1>Hello {{ fullName }}</h1>
+          <ul class="text-left">
+            <li>First name: {{ firstName }}</li>
+            <li>Last name: {{ lastName }}</li>
+          </ul>
           <hr>
-          <h3>Current XP: {{ xp }}</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <button class='btn btn-success btn-block' @click='addXp'><span class="glyphicon glyphicon-collapse-up"></span> Add XP</button>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <button class='btn btn-success btn-block' @click='decreaseXp'><span class="glyphicon glyphicon-collapse-down"></span> Decrease XP</button>
-                </div>
-              </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Full name:</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>First name:</label>
+            <input type="text" class="form-control" v-model='firstName'>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Last name:</label>
+            <input type="text" class="form-control" v-model='lastName'>
           </div>
         </div>
       </div>
@@ -42,27 +51,12 @@
     var app = new Vue({
       el: '#app',
       data: {
-        xp: 10,
-      },
-      methods: {
-        addXp: function() {
-          return this.xp += 10
-        },
-        decreaseXp: function() {
-          return this.xp -= 10
-        },
+        firstName: '',
+        lastName: '',
       },
       computed: {
-        level: function() {
-          if (this.xp >= 200) {
-            return 'Pro'
-          } else if (this.xp >= 100) {
-            return 'Intermediate'
-          } else if (this.xp >= 0) {
-            return 'Beginner'
-          } else {
-            return 'Banned'
-          }
+        fullName: function() {
+          return this.firstName + ' ' + this.lastName
         }
       },
     })

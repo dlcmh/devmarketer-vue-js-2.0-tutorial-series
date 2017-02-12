@@ -55,3 +55,7 @@ In-template expressions are very convenient, but they are really only meant for 
 At this point, the template is no longer simple and declarative. You have to look at it for a second before realizing that it displays `message` in reverse. The problem is made worse when you want to include the reversed message in your template more than once.
 
 That’s why for any complex logic, you should use a __computed property__.
+
+### 09 - Computed setters & getters
+
+Difference between a computed property and a method is Vue will cache a computed property.
