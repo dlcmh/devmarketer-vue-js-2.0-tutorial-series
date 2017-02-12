@@ -7,3 +7,7 @@ Based on [Vue.js Fundamentals - YouTube](https://www.youtube.com/playlist?list=P
 Starter `index.html` template.
 
 Minimal Vue app.
+
+### 03 - Directives
+
+Directive begin with 'v-'.
