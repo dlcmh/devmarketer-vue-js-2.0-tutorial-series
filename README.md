@@ -59,3 +59,11 @@ That’s why for any complex logic, you should use a __computed property__.
 ### 09 - Computed setters & getters
 
 Difference between a computed property and a method is Vue will cache a computed property.
+
+### 10 - AJAX API calls
+
+Originally, the API to be called is the City/State Lookup Web Tool of the USPS Address Information API, see the [API guide](https://www.usps.com/business/web-tools-apis/address-information-api.htm#_Toc410982991).
+
+Due to the overly-complicated API, we'll use an alternative, [Ziptastic API](https://ziptasticapi.com/) - > eg [https://ziptasticapi.com/90210](https://ziptasticapi.com/90210) yields `{"country":"US","state":"CA","city":"BEVERLY HILLS"}`.
+
+Read [Clean up your Vue modules with ES6 Arrow Functions](https://dotdev.co/clean-up-your-vue-modules-with-es6-arrow-functions-2ef65e348d41#.ar0zpivks) for Promises and Callbacks using ES6 fat arrow functions.
