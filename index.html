@@ -23,12 +23,12 @@
           <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <button class='btn btn-success btn-block'><span class="glyphicon glyphicon-collapse-up"></span> Add XP</button>
+                  <button class='btn btn-success btn-block' @click='addXp'><span class="glyphicon glyphicon-collapse-up"></span> Add XP</button>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <button class='btn btn-success btn-block'><span class="glyphicon glyphicon-collapse-down"></span> Decrease XP</button>
+                  <button class='btn btn-success btn-block' @click='decreaseXp'><span class="glyphicon glyphicon-collapse-down"></span> Decrease XP</button>
                 </div>
               </div>
           </div>
@@ -43,7 +43,15 @@
       el: '#app',
       data: {
         xp: 10,
-      }
+      },
+      methods: {
+        addXp: function() {
+          return this.xp += 10
+        },
+        decreaseXp: function() {
+          return this.xp -= 10
+        },
+      },
     })
   </script>
 </html>
