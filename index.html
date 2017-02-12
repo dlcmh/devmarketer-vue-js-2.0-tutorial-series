@@ -49,6 +49,16 @@
         startingCity: '',
         endingZip: '',
         endingCity: '',
+      },
+      watch: {
+        startingZip: function() {
+          // clear startingCity when startingZip input detected
+          this.startingCity = ''
+
+          if (this.startingZip.length == 5) {
+            // call API method to populate startingCity
+          }
+        }
       }
     })
   </script>
