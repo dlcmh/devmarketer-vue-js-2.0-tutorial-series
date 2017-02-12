@@ -3,3 +3,5 @@ Based on [Vue.js Fundamentals - YouTube](https://www.youtube.com/playlist?list=P
 ## Notes
 
 ### 02 - Setup
+
+Starter `index.html` template.
