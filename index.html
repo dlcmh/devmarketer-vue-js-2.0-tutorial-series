@@ -16,6 +16,13 @@
       <p v-if='render1'>This gets inserted into the DOM</p>
       <p v-if='render2'>This won't get inserted into the DOM</p>
       <p v-if='render1 || render2'>This gets inserted into the DOM</p>
+
+      <p style='color: crimson' v-if='random_number > 0.5'>
+        Now you see me (because {{ random_number }} is > 0.5)
+      </p>
+      <p style='color: teal' v-else>
+        Now you don't (because {{ random_number }} is <= 0.5)
+      </p>
     </div>
   </body>
 
@@ -30,6 +37,7 @@
         visited: false,
         render1: true,
         render2: false,
+        random_number: Math.random(),
       }
     })
   </script>
