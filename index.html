@@ -62,7 +62,9 @@
         }
       },
       methods: {
-        lookupStartingZip: _.debounce(function() {}, 500)
+        lookupStartingZip: _.debounce(function() {
+          this.startingCity = 'Searching...'
+        }, 500)
       }
     })
   </script>
