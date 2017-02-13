@@ -63,7 +63,16 @@
       },
       methods: {
         lookupStartingZip: _.debounce(function() {
-          this.startingCity = 'Searching...'
+          self = this
+          self.startingCity = 'Searching...'
+          axios.get('https://ziptasticapi.com/' + self.startingZip)
+               .then(function(response) {
+                 self.startingCity = response.data.city + ', '
+                                     + response.data.state
+               })
+               .catch(function(error) {
+                 self.startingCity = 'Invalid Zipcode'
+               })
         }, 500)
       }
     })
