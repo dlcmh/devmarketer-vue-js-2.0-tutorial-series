@@ -59,7 +59,13 @@
             // call API method to populate startingCity
             this.lookupStartingZip()
           }
-        }
+        },
+        endingZip: function() {
+          this.endingCity = ''
+          if (this.endingZip.length == 5) {
+            this.lookupEndingZip()
+          }
+        },
       },
       methods: {
         lookupStartingZip: _.debounce(function() {
@@ -72,7 +78,18 @@
                .catch(function(error) {
                  this.startingCity = 'Invalid Zipcode'
                })
-        }, 500)
+        }, 500),
+        lookupEndingZip: _.debounce(function() {
+          this.endingCity = 'Searching...'
+          axios.get('https://ziptasticapi.com/' + this.endingZip)
+               .then((response) => {
+                 this.endingCity = response.data.city + ', '
+                                   + response.data.state
+               })
+               .catch(function(error) {
+                 this.endingCity = 'Invalid Zipcode'
+               })
+        }, 500),
       }
     })
   </script>
